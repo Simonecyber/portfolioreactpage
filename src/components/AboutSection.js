@@ -2,34 +2,49 @@ import React from "react";
 import Home1 from '../img/home1.png';
 import { About, Description, Hide, Image } from '../styles';
 
+//Framer Motion
+import {motion} from 'framer-motion';
+import {titleAnim, fade,photoAnim} from '../animation';
+import Wave from './Wave';
+
 
 
 const AboutSection = () => {
 
-	const toggle = false;
+	/*const titleAnim = { //titolo della varite 
+		hidden: {opacity:0}, //nome variazione 
+		show:{opacity:1, transition:{duration:1}}, //nome variazione
+	};
+
+	const container = {
+		hidden:{x:100},
+		show:{x:0, transition:{duration:0.75, ease:"easeOut",staggerChildren:1, when:'afterChildren'},}
+	}*/
 	return (
 
 		<About>
 			<Description>
-				<div className="title">
+				<motion.div className="title">
 					<Hide>
-						<h2>We work to make</h2>
+						<motion.h2 variants={titleAnim}>We work to make</motion.h2>
+						
 					</Hide>
 					<Hide>
-						<h2>your <span>dream </span> come</h2>
+						<motion.h2 variants={titleAnim}>your <span>dream </span> come</motion.h2>
 					</Hide>
-					<Hide>
-						<h2>true.</h2>
+					<Hide >
+						<motion.h2 variants={titleAnim}>true.</motion.h2>
 					</Hide>
-				</div>
-				<p>Contact us for any photography or videography ideas that you have. We have
+				</motion.div>
+				<motion.p variants={fade} >Contact us for any photography or videography ideas that you have. We have
 					professional with amazing skills
-				</p>
-				<button>Contact us</button>
+				</motion.p>
+				<motion.button variants={fade}>Contact us</motion.button>
 			</Description>
 			<Image>
-				<img src={Home1} alt="guy with camera" />
+				<motion.img variants={photoAnim} src={Home1} alt="guy with camera" />
 			</Image>
+			<Wave />
 		</About>
 	)
 };
