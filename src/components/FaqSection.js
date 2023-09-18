@@ -1,52 +1,59 @@
 
-import React from "react";
+import React, {useState} from "react";
 import styled from 'styled-components';
 
 import { About } from '../styles';
-
+import Toggle from './Toggle';
+import { LayoutGroup, motion } from "framer-motion"
 
 
 
 const FaqSections = () => {
+	
 	return (
 		<Faq>
 			<h1>Any questions? <span>FAQ</span> </h1>
-			<div className="question">
-				<h4>How Do I Start?</h4>
+			
+			<LayoutGroup>
+			<Toggle  title='How Do I Start?'>
+			
 				<div className="answare">
 					<p>Ea aliqua consectetur aliqua adipisicing.</p>
 					<p>Consectetur enim esse velit aute ad aliquip occaecat labore consequat qui.
 						Nulla est cillum dolore quis voluptate eu elit ipsum. Cillum fugiat ipsum eu culpa aute.</p>
 				</div>
-				<div className="faq-line"></div>
-			</div>
-			<div className="question">
-				<h4>Daily Schedule</h4>
+			
+			</Toggle>
+
+			<Toggle  title='Daily Schedule'>
+			
 				<div className="answare">
 					<p>Ea aliqua consectetur aliqua adipisicing.</p>
 					<p>Consectetur enim esse velit aute ad aliquip occaecat labore consequat qui.
 						Nulla est cillum dolore quis voluptate eu elit ipsum. Cillum fugiat ipsum eu culpa aute.</p>
 				</div>
-				<div className="faq-line"></div>
-			</div>
-			<div className="question">
-				<h4>different pay methods</h4>
+			
+			</Toggle>
+
+			<Toggle  title='different pay methods'>
+			
 				<div className="answare">
 					<p>Ea aliqua consectetur aliqua adipisicing.</p>
 					<p>Consectetur enim esse velit aute ad aliquip occaecat labore consequat qui.
 						Nulla est cillum dolore quis voluptate eu elit ipsum. Cillum fugiat ipsum eu culpa aute.</p>
 				</div>
-				<div className="faq-line"></div>
-			</div>
-			<div className="question">
-				<h4>What products do you offer?</h4>
+			
+			</Toggle>
+			<Toggle  title='What products do you offer?'>
+			
 				<div className="answare">
 					<p>Ea aliqua consectetur aliqua adipisicing.</p>
 					<p>Consectetur enim esse velit aute ad aliquip occaecat labore consequat qui.
 						Nulla est cillum dolore quis voluptate eu elit ipsum. Cillum fugiat ipsum eu culpa aute.</p>
 				</div>
-				<div className="faq-line"></div>
-			</div>
+			
+			</Toggle>
+			</LayoutGroup>
 		</Faq>
 	)
 }
@@ -54,6 +61,7 @@ const FaqSections = () => {
 
 const Faq = styled(About)`
 display: block;
+margin-top: 25px;
 span{
 	display: block;
 }
