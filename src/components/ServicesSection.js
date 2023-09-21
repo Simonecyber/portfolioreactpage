@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 
 //Import Icon
 
@@ -10,12 +10,20 @@ import teamwork from '../img/teamwork.svg';
 import home2 from '../img/home2.png';
 //Style
 import { About, Description, Image } from '../styles';
-
 import styled from 'styled-components';
 
+import {fade} from '../animation';
+import { useScroll } from "./useScroll";
+
+
+
 const ServicesSection = () => {
+	const [element, controls] = useScroll();
+	
+
+
 	return (
-		<Service>
+		<Service variants={fade} animate={controls} initial='hidden'  ref={element}>
 			<Description>
 				<h2>Hagh <span>quality</span> service</h2>
 				<Cards>
