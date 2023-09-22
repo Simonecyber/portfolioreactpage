@@ -3,7 +3,7 @@
 Personal project. In this project i've built a personal portfolio to improve reactjs framework skills.
 ### Screenshot
 
-![](screen.PNG)
+![](Screen.PNG)
 
 ## Technologies
 ***
