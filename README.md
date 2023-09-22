@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+### General Info
+***
+Personal project. In this project i've built a personal portfolio to improve reactjs framework skills.
+### Screenshot
+
+(screen.png)
+
+## Technologies
+***
+A list of technologies used within the project:
+* [ReactJs Framework]
+* [React Router Dom]
+* [Motion Frame]
+
+## Installation
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
